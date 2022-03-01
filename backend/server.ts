@@ -12,8 +12,8 @@ app.get("/", function (req, res) {
 app.get("/getISSPosition", async function (req, res) {
     const result: any = await Request.get('https://www.openligadb.de/api/getavailableteams/bl1/2021')
 
-    res.send(`the ISS is above: ${JSON.stringify(result)}`);
-    console.log(`${JSON.stringify(result)}`);
+    res.send(`${result.length} ${JSON.stringify(result[1].TeamIconUrl)}`);
+    console.log(`${JSON.stringify(result[1].TeamIconUrl)}`);
 });
 
 const port = 3000
