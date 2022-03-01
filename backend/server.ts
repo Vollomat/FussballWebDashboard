@@ -12,7 +12,7 @@ app.get("/", async function (req, res) {
     let ergebnis = "";
 
     for (let i = 0; i < result.length; i++) {
-        ergebnis = ergebnis + "<img src= " + result[i].TeamIconUrl + ">";
+        ergebnis = ergebnis + "<img src= " + result[i].TeamIconUrl + " height=100 width=100 >";
         console.log (result[i].TeamIconUrl);
       }
 
