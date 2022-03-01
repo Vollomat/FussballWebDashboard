@@ -13,6 +13,10 @@ app.get("/getISSPosition", async function (req, res) {
     const result: any = await Request.get('https://www.openligadb.de/api/getavailableteams/bl1/2021')
 
     res.send(`${result.length} ${JSON.stringify(result[1].TeamIconUrl)}`);
+    for (let i = 0; i < result.length; i++) {
+        console.log (result[i].TeamIconUrl);
+      }
+
     console.log(`${JSON.stringify(result[1].TeamIconUrl)}`);
 });
 
