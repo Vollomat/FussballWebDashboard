@@ -5,17 +5,14 @@ const app = opine();
 
 const pathToIndexHTMLFile = `${Deno.cwd()}/frontend/index.html`
 
-app.get("/", function (req, res) {
-    res.sendFile(pathToIndexHTMLFile); // consider providing the index.html via github pages as an alternative
-});
 
-app.get("/getISSPosition", async function (req, res) {
+app.get("/", async function (req, res) {
     const result: any = await Request.get('https://www.openligadb.de/api/getavailableteams/bl1/2021')
 
     let ergebnis = "";
 
     for (let i = 0; i < result.length; i++) {
-        ergebnis = ergebnis + "<br> " + result[i].TeamIconUrl;
+        ergebnis = ergebnis + "<img src= " + result[i].TeamIconUrl + ">";
         console.log (result[i].TeamIconUrl);
       }
 
