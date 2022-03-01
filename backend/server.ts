@@ -9,15 +9,18 @@ const pathToIndexHTMLFile = `${Deno.cwd()}/frontend/index.html`
 app.get("/", async function (req, res) {
     const result: any = await Request.get('https://www.openligadb.de/api/getavailableteams/bl1/2021')
 
-    let ergebnis = "";
+    let ergebnis = "<h1>Fußball Bundesliga 2022</h1>";
 
     for (let i = 0; i < result.length; i++) {
-        ergebnis = ergebnis + "<img src= " + result[i].TeamIconUrl + " height=100 width=100 >";
-        console.log (result[i].TeamIconUrl);
-      }
-
+        ergebnis = ergebnis + "<img src= " + result[i].TeamIconUrl + " height=100 width=100>";
+        if(i != 0) {
+            if(i%6 == 0) {
+                ergebnis = ergebnis + "<br>";
+            }
+        }
+    }
     res.send(`${ergebnis}`);
-    console.log(`${JSON.stringify(result[1].TeamIconUrl)}`);
+    console.log(`${ergebnis}`);
 });
 
 const port = 3000
