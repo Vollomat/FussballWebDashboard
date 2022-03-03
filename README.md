@@ -16,3 +16,4 @@ Aktuelle Spiele
 Infos
 Betreiber
 
+https://github.com/OpenLigaDB/OpenLigaDB-Samples
