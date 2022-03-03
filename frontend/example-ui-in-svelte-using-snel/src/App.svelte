@@ -1,17 +1,12 @@
 <script>
-  import UserInput from "@/components/UserInput.svelte";
   import { fade } from "svelte/transition";
   import Tabelle from "@/components/Tabelle.svelte";
-
+  
   let name = "";
   
 </script>
 
 <main transition:fade>
-
-  <p><br /></p>
-
-  <UserInput />
   <Tabelle />
 </main>
 

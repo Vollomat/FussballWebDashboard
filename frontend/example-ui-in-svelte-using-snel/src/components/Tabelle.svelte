@@ -1,5 +1,6 @@
 <script>
     import { Request } from 'https://deno.land/x/request@1.3.2/mod.ts'
+    
 
     let ergebnisTabelle = '';
     let promise;
@@ -42,12 +43,12 @@ async function getTabelle() {
 <style>
 td{
     height: 2%;
-    width:20%;
+    width:10%;
 }
 
 img{
     height: 2%;
-    width:20%;
+    width:10%;
 }
 
 </style>
