@@ -11,6 +11,9 @@ Nandini:
 Startseite mit den Bildern der Vereine als Buttons
 Tabelle der verschiedenen Saisons
 
+Dana:
+Aktuellste Infos zu aktuellen Spielen (Datum, Ergebnis, Wer hat welche Tore geschossen, Gelbe/Rote Karten)
+
 Menü:
 Aktuelle Spiele
 Infos
