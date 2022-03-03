@@ -1,13 +1,19 @@
 <script>
   import { fade } from "svelte/transition";
-  import Tabelle from "@/components/Tabelle.svelte";
+  import Tabelle from "@/components/MiddlePart/Tabelle.svelte";
   
   let name = "";
   
 </script>
 
 <main transition:fade>
+
+  Hier kommt der Header hin
+
   <Tabelle />
+
+
+  Hier Kommt der Footer hin
 </main>
 
 <style>
