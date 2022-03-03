@@ -21,15 +21,19 @@ async function getTabelle() {
 
       <table>
         <tr>
+        <td></td>
         <td><h2>Teamname</h2></td>
-        <td><h2>Tore</h2></td>
         <td><h2>Punkte</h2></td>
+        <td><h2>Tore</h2></td>
+        <td><h2>Gegentore</h2></td>
         </tr>
         {#each ergebnisTabelle as tabellenplatz}
         <tr>
+        <td><img src = {tabellenplatz.TeamIconUrl} alt="Unknown"></td> 
         <td>{tabellenplatz.TeamName}</td>
-        <td>{tabellenplatz.Goals}</td>
         <td>{tabellenplatz.Points}</td>
+        <td>{tabellenplatz.Goals}</td>
+        <td>{tabellenplatz.OpponentGoals}</td>
         </tr>
         {/each}
     </table>
@@ -37,7 +41,12 @@ async function getTabelle() {
 
 <style>
 td{
-    height: 25px;
+    height: 2%;
+    width:20%;
+}
+
+img{
+    height: 2%;
     width:20%;
 }
 
