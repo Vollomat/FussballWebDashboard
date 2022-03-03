@@ -1,6 +1,7 @@
 <script>
   import UserInput from "@/components/UserInput.svelte";
   import { fade } from "svelte/transition";
+  import Tabelle 
 
   let name = "";
   
@@ -11,7 +12,7 @@
   <p><br /></p>
 
   <UserInput />
-  
+  <Tabelle />
 </main>
 
 <style>
