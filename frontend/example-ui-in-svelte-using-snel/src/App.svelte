@@ -1,17 +1,18 @@
 <script>
-  import Home from "@/components/Home.svelte";
   import UserInput from "@/components/UserInput.svelte";
   import { fade } from "svelte/transition";
+  import Unterseite from "@/components/Unterseite.svelte"
 
   let name = "";
+  
 </script>
 
 <main transition:fade>
-  <Home {name} />
 
   <p><br /></p>
 
   <UserInput />
+  
 </main>
 
 <style>
