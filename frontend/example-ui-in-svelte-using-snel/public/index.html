@@ -9,11 +9,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
     <title>Bundesliga-Manager</title>
-    <style type="text/css">
-      body:before {
-        content: attr(message);
-      }
-    </style>
   </head>
   <body>
     <div id="__snel"></div>
@@ -22,14 +17,4 @@
     <script src="/__SNEL__HOT__RELOADING.js"></script>
   </body>
 
-  <script>
-    (() => {
-      const redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redirect && redirect !== location.href) {
-        history.replaceState(null, null, redirect);
-      } else {
-      }
-    })();
-  </script>
 </html>
