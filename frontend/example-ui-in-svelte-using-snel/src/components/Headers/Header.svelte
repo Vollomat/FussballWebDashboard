@@ -15,7 +15,7 @@
                                alt="logo"></a>
     <nav>
         <ul class="nav_links">
-            <li><a href="subpages/programm.html">Spielplan</a></li>
+            <li><a href="../src/components/MiddlePart/Spielplan.svelte">Spielplan</a></li>
             <li><a href="subpages/events.html">Clubs</a></li>
             <li><a href="subpages/preise.html">Spieler</a></li>
             <li><a href="subpages/events.html">Statistiken</a></li>
