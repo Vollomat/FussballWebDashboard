@@ -15,7 +15,6 @@ async function getTabelle() {
 }
 
 
-
 </script>
 <center> 
 {#await promise}
@@ -23,25 +22,25 @@ async function getTabelle() {
     <div allign="center">
         <table border="1">
             <tr>
-            <td style="background-color:#00aaff"><h1>Verein</h1></td>
-            <td style="background-color:#00fff7"><h2>Punkte</h2></td>
-            <td style="background-color:#00aaff"><h2>Sp</h2></td>
-            <td style="background-color:#00fff7"><h2>S</h2></td>
-            <td style="background-color:#00aaff"><h2>U</h2></td>
-            <td style="background-color:#00fff7"><h2>N</h2></td>
-            <td style="background-color:#00aaff"><h2>T</h2></td>
-            <td style="background-color:#00fff7"><h2>GT</h2></td>
+            <td ><h2>Verein</h2></td>
+            <td style="background-color:#243D85">&nbsp Punkte &nbsp</td>
+            <td >&nbsp Sp &nbsp</td>
+            <td style="background-color:#243D85">&nbsp S &nbsp</td>
+            <td >&nbsp U &nbsp</td>
+            <td style="background-color:#243D85">&nbsp N &nbsp</td>
+            <td >&nbsp T &nbsp</td>
+            <td style="background-color:#243D85">&nbsp GT &nbsp</td>
             </tr>
             {#each ergebnisTabelle as tabellenplatz}
             <tr>
-            <td class="linkeSeite" style="background-color:#00aaff"><img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="30">{tabellenplatz.TeamName}</td>
-            <td style="background-color:#00fff7">{tabellenplatz.Points}</td>
-            <td style="background-color:#00aaff">{tabellenplatz.Matches}</td> 
-            <td style="background-color:#00fff7">{tabellenplatz.Won}</td>
-            <td style="background-color:#00aaff">{tabellenplatz.Draw}</td>
-            <td style="background-color:#00fff7">{tabellenplatz.Lost}</td>
-            <td style="background-color:#00aaff">{tabellenplatz.Goals}</td>
-            <td style="background-color:#00fff7">{tabellenplatz.OpponentGoals}</td>
+            <td class="linkeSeite" ><img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {tabellenplatz.TeamName} </td>
+            <td style="background-color:#243D85">&nbsp {tabellenplatz.Points} &nbsp</td>
+            <td >&nbsp {tabellenplatz.Matches} &nbsp</td> 
+            <td style="background-color:#243D85">&nbsp {tabellenplatz.Won}&nbsp</td>
+            <td >&nbsp {tabellenplatz.Draw} &nbsp</td>
+            <td style="background-color:#243D85">&nbsp {tabellenplatz.Lost} &nbsp</td>
+            <td >&nbsp {tabellenplatz.Goals} &nbsp</td>
+            <td style="background-color:#243D85">&nbsp {tabellenplatz.OpponentGoals} &nbsp</td>
             </tr>
             {/each}
         </table>
@@ -51,11 +50,17 @@ async function getTabelle() {
 <style>
 td{
   text-align: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  height: 50px;
 }
 
 .linkeSeite{
     text-align: left;
 }
 
+table{
+    width: 60%;
+}
 
 </style>
