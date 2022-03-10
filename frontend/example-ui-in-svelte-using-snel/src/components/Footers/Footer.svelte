@@ -233,5 +233,4 @@ ul {
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
-
 </style>

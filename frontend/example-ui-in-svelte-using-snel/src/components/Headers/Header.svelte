@@ -89,19 +89,4 @@ button {
 button:hover {
     background-color: rgb(85, 98, 173);
 }
-
-.movie_links li {
-    display: inline-block;
-    padding: 0 10px;
-}
-
-.movie_links li a {
-    transition: all 0.2s ease 0s;
-}
-
-.movies img {
-    padding: 20px;
-    width: 30px;
-    max-width: 150px;
-}
 </style>
