@@ -1,5 +1,7 @@
 <script>
     import { Request } from 'https://deno.land/x/request@1.3.2/mod.ts'
+
+    import { SortService, Direction } from "https://deno.land/x/sort@v1.1.1/mod.ts"
     
 
     let ergebnisTorschuetze = '';
@@ -8,10 +10,10 @@
 promise = getTorschuetze();
 
 async function getTorschuetze() {
-    let uri = 'https://www.openligadb.de/api/getgoalgetters/bl1/2022'
+    let uri = 'https://www.openligadb.de/api/getgoalgetters/bl1/2021'
     const result = await Request.get(uri)
-    ergebnisTorschuetze = result;
-    console.log(ergebnisTorschuetze[0])
+    const sortedResult = SortService.sort(result, [{ fieldName: 'GoalCount', direction: Direction.DESCENDING }])
+    ergebnisTorschuetze = sortedResult
 }
 
 
@@ -22,13 +24,13 @@ async function getTorschuetze() {
     <div allign="center">
         <table border="1">
             <tr>
-            <td style="background-color:#00aaff"><h1>Name</h1></td>
-            <td style="background-color:#00fff7"><h2>Tore</h2></td>
+            <td><h1>Name</h1></td>
+            <td><h2>Tore</h2></td>
             </tr>
             {#each ergebnisTorschuetze as torschuetzenplatz}
             <tr>
-            <td style="background-color:#00fff7">{torschuetzenplatz.GoalGetterName}</td>
-            <td style="background-color:#00aaff">{torschuetzenplatz.GoalCount}</td> 
+            <td>{torschuetzenplatz.GoalGetterName}</td>
+            <td>{torschuetzenplatz.GoalCount}</td> 
             </tr>
             {/each}
         </table>
