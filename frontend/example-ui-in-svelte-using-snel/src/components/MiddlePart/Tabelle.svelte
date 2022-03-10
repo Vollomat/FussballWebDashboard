@@ -17,6 +17,7 @@ async function getTabelle() {
 
 
 </script>
+<center> 
 {#await promise}
 {:then}
     <div allign="center">
@@ -46,7 +47,7 @@ async function getTabelle() {
         </table>
     </div>
 {/await}
-
+</center>
 <style>
 td{
   text-align: center;
