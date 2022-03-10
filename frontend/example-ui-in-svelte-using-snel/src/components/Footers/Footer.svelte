@@ -32,16 +32,13 @@
                 <h4>Folge Uns Auf</h4>
                 <div class="social-links">
                     <div class="facebook">
-                        <div class="tooltip"><a href="verlinkung.html"><img src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/facebook%20(1).png?v=1646402392741" width= "40" alt="alternativer_text"><i
-                                class="fab fa-facebook-f"></i></a><span class="tooltiptext">Facebook</span></div>
+                        <div class="tooltip"><a href="verlinkung.html"><img src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/facebook%20(1).png?v=1646402392741" width= "40" alt="alternativer_text"></a><span class="tooltiptext">Facebook</span></div>
                 </div>
                 <div class="twitter">
-                    <div class="tooltip"><a href="verlinkung.html"><img src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/twitter%20(3).png?v=1646428261470" width= "40" alt="alternativer_text"><i
-                        class="fab fa-twitter"></i></a><span class="tooltiptext">Twitter</span></div>
+                    <div class="tooltip"><a href="verlinkung.html"><img src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/twitter%20(3).png?v=1646428261470" width= "40" alt="alternativer_text"></a><span class="tooltiptext">Twitter</span></div>
                     </div>
                 <div class="instagram">
-                    <div class="tooltip"><a href="verlinkung.html"><img src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/instagram%20(1).png?v=1646402383404" width= "40" alt="alternativer_text"><i
-                         class="fab fa-instagram"></i></a><span class="tooltiptext">Instagram</span></div>
+                    <div class="tooltip"><a href="verlinkung.html"><img src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/instagram%20(1).png?v=1646402383404" width= "40" alt="alternativer_text"></a><span class="tooltiptext">Instagram</span></div>
                     </div>
                 </div>
             </div>
@@ -100,7 +97,7 @@ ul {
     position: absolute;
     left: 0;
     bottom: -10px;
-    background-color: rgb(2, 20, 24);;
+    background-color: rgb(36, 61, 133);
     height: 2px;
     box-sizing: border-box;
     width: 50px;
@@ -129,12 +126,12 @@ ul {
     display: inline-block;
     height: 40px;
     width: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #ffffff;
     margin: 0 10px 10px 0;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: #ffffff;
+    color: orange;
     transition: all 0.05s ease;
 }
 
@@ -169,8 +166,8 @@ ul {
 }
 
 /*tooltip*/
-----------------------------------------------
-    /* Tooltip container */
+/*----------------------------------------------
+/* Tooltip container */
 .tooltip {
     position: relative;
     display: inline-block;
