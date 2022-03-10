@@ -6,6 +6,7 @@ auf mac: deno run --allow-net --allow-read \backend\\server.ts
 Elisa:
 Übersichtsseite der Vereine
 Logo
+https://www.openligadb.de/api/getbltable/bl1/2021
 
 Nandini:
 Startseite mit den Bildern der Vereine als Buttons

@@ -2,7 +2,8 @@
 
 </script>
 
-<h2>Test</h2>
+<h2>[Vereinsname Variable]</h2>
+
 
 <style>
 
