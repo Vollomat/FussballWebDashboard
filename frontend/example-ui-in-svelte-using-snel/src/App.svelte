@@ -4,6 +4,7 @@
   import Footer from "@/components/Footers/Footer.svelte";
   import Header from "@/components/Headers/Header.svelte";
   import Vereine from "@/components/MiddlePart/Vereine.svelte";
+  import Torschuetzen from "@/components/MiddlePart/Torschuetzen.svelte";
   
   let name = "";
   let StatusDerSeite = "Startseite";
@@ -16,6 +17,7 @@
 
   {#if StatusDerSeite = "Startsseite"}
     <Tabelle />
+    <Torschuetzen />
   {:else if StatusDerSeite = "Vereine"}
     <Vereine />
   {/if}
