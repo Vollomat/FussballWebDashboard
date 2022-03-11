@@ -24,11 +24,13 @@ async function getTorschuetze() {
     <div allign="center">
         <table border="1">
             <tr>
+            <td><h1>Platz</h1></td>
             <td><h1>Name</h1></td>
             <td><h2>Tore</h2></td>
             </tr>
-            {#each ergebnisTorschuetze as torschuetzenplatz}
+            {#each ergebnisTorschuetze as torschuetzenplatz, i}
             <tr>
+            <td>{i+1}.</td>
             <td>{torschuetzenplatz.GoalGetterName}</td>
             <td>{torschuetzenplatz.GoalCount}</td> 
             </tr>

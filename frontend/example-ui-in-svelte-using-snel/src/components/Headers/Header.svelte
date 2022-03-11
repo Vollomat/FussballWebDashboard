@@ -1,3 +1,13 @@
+<script>
+
+import Torschuetzen from "@/components/MiddlePart/Torschuetzen.svelte";
+
+
+</script>
+
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +28,7 @@
             <li><a href="../src/components/MiddlePart/Spielplan.svelte">Spielplan</a></li>
             <li><a href="subpages/events.html">Clubs</a></li>
             <li><a href="subpages/preise.html">Spieler</a></li>
-            <li><a href="subpages/events.html">Statistiken</a></li>
+            <li><a href="../MiddlePart/Torschuetzen.svelte">Statistiken</a></li>
             <li><a href="subpages/preise.html">Videos</a></li>
         </ul>
     </nav> <!-- end navigation -->
