@@ -17,10 +17,11 @@
   <Header />
 
   {#if StatusDerSeite = "Startsseite"}
+    <Vereine />
     <Tabelle />
     <Torschuetzen />
   {:else if StatusDerSeite = "Vereine"}
-    <Vereine />
+    <Spielplan />
   {/if}
   
   <Footer />
