@@ -6,6 +6,7 @@
   import Vereine from "@/components/MiddlePart/Vereine.svelte";
   import Torschuetzen from "@/components/MiddlePart/Torschuetzen.svelte";
   import Spielplan from "@/components/MiddlePart/Spielplan.svelte";
+
   
   let name = "";
   let StatusDerSeite = "Startseite";

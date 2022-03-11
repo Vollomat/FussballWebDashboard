@@ -8,44 +8,48 @@
 promise = getSpielplan();
 
 async function getSpielplan() {
-    let uri = 'https://www.openligadb.de/api/getbltable/bl1/2021'
+    let uri = 'https://www.openligadb.de/api/getmatchdata/bl1/2021'
     const result = await Request.get(uri)
     spiele = result;
-    console.log(spiele[0])
+    
 }
 
 
 
 </script>
+<center>
 {#await promise};
 {:then}
     <div allign="center">
         <table border="1">
             <tr>
-            <td style="background-color:#00aaff"><h2>Spieltag</h2></td>
-            <td style="background-color:#00aaff"><h2>Datum</h2></td>
-            <td style="background-color:#00aaff"><h2>Ort</h2></td>
-            <td style="background-color:#00fff7"><h2>Mannschaft 1</h2></td>
-            <td style="background-color:#00aaff"><h2>Mannschaft 2</h2></td>
+            <td><h2>&nbsp Spieltag &nbsp</h2></td>
+            <td style="background-color:#243D85">&nbsp Datum &nbsp</td>
+            <td>&nbsp Ort &nbsp</td>
+            <td style="background-color:#243D85">&nbsp Mannschaft 1 &nbsp</td>
+            <td>&nbsp Mannschaft 2 &nbsp</td>
             </tr>
             {#each spiele as spielplan}
             <tr>
-            <td style="background-color:#00aaff">{spielplan.TeamName}</td>
-            <td style="background-color:#00fff7">{spielplan.GroupOrderID}</td>
-            <td style="background-color:#00aaff">{spielplan.MatchDateTime}</td> 
-            <td style="background-color:#00fff7">{spielplan.Location}</td>
-            <td style="background-color:#00aaff">{spielplan.TeamName}</td>
-            <td style="background-color:#00fff7">{spielplan.TeamName}</td>
+            <td>&nbsp {spielplan.GroupOrderID} &nbsp</td>
+            <td style="background-color:#243D85">&nbsp {spielplan.MatchDateTime} &nbsp</td> 
+            <td>&nbsp {spielplan.LocationCity} &nbsp</td>
+            <td style="background-color:#243D85">&nbsp {spielplan.TeamName} &nbsp</td>
+            <td>&nbsp {spielplan.TeamName} &nbsp</td>
             </tr>
             {/each}
         </table>
     </div>
 {/await}
-
+</center>
 <style>
 td{
   text-align: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  height: 50px;
 }
+
 
 
 </style>
