@@ -21,17 +21,17 @@ async function getTabelle() {
 <!-- Logo als Bild hier rein [TeamIconUrl]-->
 
 
-<h1>Verein {tabellenplatz.TeamName}</h1>
-<h2>Kurzname Verein {tabellenplatz.ShortName}</h2>
+<h1>Verein: {tabellenplatz.TeamName}</h1>
+<h2>Kurzname: {tabellenplatz.ShortName}</h2>
 
 <p>
     Punkte: {tabellenplatz.Points} <br />
     Spiele: {tabellenplatz.Matches} <br />
-    Gewonnen: [Won] <br />
-    Verloren: [Lost] <br />
-    Gleichstand: [Draw] <br />
-    Tore: [Goals] <br />
-    Gegnertore: [OpponentGoals] <br />
+    Gewonnen: {tabellenplatz.Won} <br />
+    Verloren: {tabellenplatz.Lost} <br />
+    Gleichstand: {tabellenplatz.Draw} <br />
+    Tore: {tabellenplatz.Goals} <br />
+    Gegnertore: {tabellenplatz.OpponentGoals} <br />
     
 </p>
 
@@ -40,6 +40,19 @@ async function getTabelle() {
 
 
 <style>
+h1 {
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+}
 
+h2 {
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+}
 
 </style>
