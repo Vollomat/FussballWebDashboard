@@ -18,20 +18,20 @@ async function getTabelle() {
 {#await promise}
 {:then}
 {#each ergebnisTabelle as tabellenplatz, i}
-<!-- Logo als Bild hier rein [TeamIconUrl]-->
 
+<img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">
 
 <h1>Verein: {tabellenplatz.TeamName}</h1>
 <h2>Kurzname: {tabellenplatz.ShortName}</h2>
 
 <p>
-    Punkte: {tabellenplatz.Points} <br />
     Spiele: {tabellenplatz.Matches} <br />
+    Punkte: {tabellenplatz.Points} <br />
     Gewonnen: {tabellenplatz.Won} <br />
     Verloren: {tabellenplatz.Lost} <br />
     Gleichstand: {tabellenplatz.Draw} <br />
     Tore: {tabellenplatz.Goals} <br />
-    Gegnertore: {tabellenplatz.OpponentGoals} <br />
+    Gegnertore: {tabellenplatz.OpponentGoals} <br /> <br /> <br /> <br />
     
 </p>
 
