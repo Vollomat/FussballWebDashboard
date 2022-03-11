@@ -3,15 +3,6 @@
         <div class="row">
             <div class="footer-col">
                 <ul>
-                    <li><h4>Informationen</h4></li>
-                    <li><a href="subpages/preise.html">Eintrittspreise</a></li>
-                    <li><a href="subpages/anfahrt.html">Anfahrt & Öffnungszeiten</a></li>
-                    <li><a href="footarea/Covid.html">Covid-19-Infos</a></li>
-                    <li><a href="footarea/gutscheine.html">Gutscheine</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <ul>
                     <li><h4>Kontakt</h4></li>
                     <li><a href="footarea/faq.html">FAQ</a></li>
                     <li><a href="subpages/contact.html">Kontakt</a></li>

@@ -1,12 +1,10 @@
 <script>
     import { Request } from 'https://deno.land/x/request@1.3.2/mod.ts'
-    
+    import { statusDerSeite } from './../stores.js'
 
     let ergebnisTabelle = '';
     let promise;
-
 promise = getTabelle();
-
 async function getTabelle() {
     let uri = 'https://www.openligadb.de/api/getbltable/bl1/2021'
     const result = await Request.get(uri)
@@ -14,8 +12,12 @@ async function getTabelle() {
     console.log(ergebnisTabelle[0])
 }
 
-
+function changeStatus(){
+    alert("Hallo");
+    statusDerSeite.set(2);
+}
 </script>
+
 <center> 
 {#await promise}
 {:then}
@@ -33,7 +35,7 @@ async function getTabelle() {
             </tr>
             {#each ergebnisTabelle as tabellenplatz}
             <tr>
-            <td class="linkeSeite" ><img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {tabellenplatz.TeamName} </td>
+            <td class="linkeSeite" on:click|once={changeStatus} ><img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {tabellenplatz.TeamName} </td>
             <td style="background-color:#243D85">&nbsp {tabellenplatz.Points} &nbsp</td>
             <td >&nbsp {tabellenplatz.Matches} &nbsp</td> 
             <td style="background-color:#243D85">&nbsp {tabellenplatz.Won}&nbsp</td>
@@ -54,13 +56,10 @@ td{
   font-family: 'Lato', sans-serif;
   height: 50px;
 }
-
 .linkeSeite{
     text-align: left;
 }
-
 table{
     width: 60%;
 }
-
 </style>

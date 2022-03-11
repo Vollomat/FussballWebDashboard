@@ -1,25 +1,30 @@
-<script>
+<script context="module">
   import { fade } from "svelte/transition";
   import Tabelle from "@/components/MiddlePart/Tabelle.svelte";
   import Footer from "@/components/Footers/Footer.svelte";
   import Header from "@/components/Headers/Header.svelte";
   import Vereine from "@/components/MiddlePart/Vereine.svelte";
   import Torschuetzen from "@/components/MiddlePart/Torschuetzen.svelte";
-  
+  import { statusDerSeite } from './components/stores.js';
+
   let name = "";
-  let StatusDerSeite = "Startseite";
+  let status;
   
+  statusDerSeite.subscribe(value => {
+		status = value;
+	});
+
 </script>
 
 <main transition:fade>
   <body>
   <Header />
 
-  {#if StatusDerSeite = "Startsseite"}
+  {#if status = 1}
     <Tabelle />
-    <Torschuetzen />
-  {:else if StatusDerSeite = "Vereine"}
+  {:else if status = 2}
     <Vereine />
+    <Torschuetzen />
   {/if}
   
   <Footer />

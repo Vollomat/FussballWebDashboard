@@ -21,3 +21,13 @@ Infos
 Betreiber
 
 https://github.com/OpenLigaDB/OpenLigaDB-Samples
+
+Patrick: Statistik zu Spielern: Torschützenliste
+
+Elisa: Vereinsseite
+
+Dana: Spielplantabelle
+
+Nandini: Die letzten 10 Spiele des Vereins
+
+Was noch zutun ist:
