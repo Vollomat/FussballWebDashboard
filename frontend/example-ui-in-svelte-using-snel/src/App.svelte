@@ -6,6 +6,7 @@
   import Vereine from "@/components/MiddlePart/Vereine.svelte";
   import Torschuetzen from "@/components/MiddlePart/Torschuetzen.svelte";
   import Spielplan from "@/components/MiddlePart/Spielplan.svelte";
+  import Tooltip from "@/components/MiddlePart/Tooltip.svelte";
 
   
   let name = "";
@@ -18,11 +19,13 @@
   <Header />
 
   {#if StatusDerSeite = "Startsseite"}
+    <Tooltip />
     <Vereine />
     <Tabelle />
     <Torschuetzen />
     <Spielplan />
   {:else if StatusDerSeite = "Vereine"}
+    <text></text>
   {/if}
   
   <Footer />
