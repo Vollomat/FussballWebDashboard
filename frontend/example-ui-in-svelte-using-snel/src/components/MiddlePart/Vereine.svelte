@@ -13,9 +13,12 @@ async function getTabelle() {
     ergebnisTabelle = result;
     console.log(ergebnisTabelle[0])
 }
+
+//funktion: fragt ab, auf welches Bild geklickt wurde und zeigt entpsrechende Vereinsinfos an
+
 </script>
 
-{#await promise}
+{#await promise};
 {:then}
 {#each ergebnisTabelle as tabellenplatz, i}
 
