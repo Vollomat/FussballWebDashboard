@@ -30,7 +30,7 @@ async function getTorschuetze() {
             </tr>
             {#each ergebnisTorschuetze as torschuetzenplatz, i}
             <tr>
-            <td>{i+1}</td>
+            <td>{i+1}.</td>
             <td>{torschuetzenplatz.GoalGetterName}</td>
             <td>{torschuetzenplatz.GoalCount}</td> 
             </tr>
