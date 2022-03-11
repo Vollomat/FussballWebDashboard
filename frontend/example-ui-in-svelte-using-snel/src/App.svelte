@@ -20,8 +20,8 @@
     <Vereine />
     <Tabelle />
     <Torschuetzen />
-  {:else if StatusDerSeite = "Vereine"}
     <Spielplan />
+  {:else if StatusDerSeite = "Vereine"}
   {/if}
   
   <Footer />
