@@ -19,7 +19,7 @@ async function getTorschuetze() {
 
 
 </script>
-{#await promise}
+{#await promise};
 {:then}
     <div allign="center">
         <table border="1">

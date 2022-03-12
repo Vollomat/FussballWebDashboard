@@ -1,29 +1,57 @@
 <script>
+    import { Request } from 'https://deno.land/x/request@1.3.2/mod.ts'
+    import { statusDerSeite } from './../stores.js'
 
+    let ergebnisTabelle = '';
+    let promise;
+promise = getTabelle();
+async function getTabelle() {
+    let uri = 'https://www.openligadb.de/api/getbltable/bl1/2021'
+    const result = await Request.get(uri)
+    ergebnisTabelle = result;
+    console.log(ergebnisTabelle[0])
+}
+
+function changeStatus(){
+    alert("Hallo");
+    statusDerSeite.set(2);
+}
 </script>
 
+{#await promise};
+{:then}
+{#each ergebnisTabelle as tabellenplatz, i}
 
 <div class="body1">
     <div class="container">
         <div class="profile">
+            <img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">
             <div class="content">
                 <div class="header">
-                    <img src = "https://wallpaperaccess.com/full/314821.jpg" alt="Unknown" width="50">
+                    <img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">
                     <div class="infos">
-                        <h3 class="name">Name</h3>
-                        <p class="title">text</p>
+                        <h3 class="name">{tabellenplatz.TeamName}</h3>
+                        <p class="title">{tabellenplatz.ShortName}</p>
                     </div>
                 </div>
                 <div class="body">
                     <p>
-                        Texttext <br />
-                        textetxt <br />
+                        Spiele: {tabellenplatz.Matches} <br />
+                        Punkte: {tabellenplatz.Points} <br />
+                        Gewonnen: {tabellenplatz.Won} <br />
+                        Verloren: {tabellenplatz.Lost} <br />
+                        Gleichstand: {tabellenplatz.Draw} <br />
+                        Tore: {tabellenplatz.Goals} <br />
+                        Gegnertore: {tabellenplatz.OpponentGoals} <br />
                     </p>
                 </div>
             </div>    
         </div>
     </div>
 </div>    
+
+{/each}
+{/await}
 
 <style>
 * {
@@ -37,7 +65,7 @@
     justify-content: center;
     align-items: center;
     font-family: 'Lato', sans-serif;
-    height: 30vh; /* Platz um das Bild herum */
+    height: 50vh; /* Platz um das Bild herum */
 }
 
 .container {
@@ -50,25 +78,23 @@
     margin: 0 1em;
     height: 50px;
     border-radius: 50%;
-    background: url(https://wallpaperaccess.com/full/314821.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     cursor: initial;
-    box-shadow: 0 0 0 1px #fff;
     transition: 0.2s;
 }
 
 .profile:hover {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 5px rgb(36, 61, 133);
+    box-shadow: 0 0 0 5px rgb(36, 61, 133);
 }
 
 .content {
     position: absolute;
-    bottom: -230px;
+    bottom: -310px;
     left: -150px;
     padding: 20px;
-    min-width: 400px;
+    min-width: 380px;
     background-color: rgb(36, 61, 133);
     border: 1px solid rgb(36, 61, 133);
     border-radius: 10px;

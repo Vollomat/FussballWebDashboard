@@ -19,7 +19,7 @@ function changeStatus(){
 </script>
 
 <center> 
-{#await promise}
+{#await promise};
 {:then}
     <div allign="center">
         <table border="1">
