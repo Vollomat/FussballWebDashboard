@@ -31,7 +31,6 @@
 
   {#if status = 1}
     <TabelleNEU />
-    <Tabelle />
     <Tooltip />
     <Torschuetzen />
     <Spielplan />

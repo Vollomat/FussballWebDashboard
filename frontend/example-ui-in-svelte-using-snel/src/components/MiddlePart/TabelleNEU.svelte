@@ -44,7 +44,7 @@ function changeStatus(){
 
             <div class="body1">
             <div class="profile">
-            <td class="linkeSeite" on:click|once={changeStatus} ><img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {tabellenplatz.TeamName} </td>
+            <td class="linkeSeite" on:click|once={changeStatus} style="border-color: transparent;"><img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {tabellenplatz.TeamName} </td>
             
             <div class="content">
                 <div class="header">
@@ -111,35 +111,33 @@ table{
 }
 
 .profile {
-    position: relative;
-    width: 50px;
-    margin: 0 1em;
-    height: 50px;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    position: absolute;
+    margin: 0 0;
     cursor: initial;
     transition: 0.2s;
+    width: 340px;
+    height: 75px;
+    box-shadow: 0 0 0 0.5px white;
 }
 
 .profile:hover {
-    box-shadow: 0 0 0 5px rgb(36, 61, 133);
+    box-shadow: 0 0 0 0.5px white, 0 0 0 5px rgb(36, 61, 133);
 }
 
 .content {
     position: absolute;
     bottom: -310px;
-    left: -150px;
+    left: -20px;
     padding: 20px;
     min-width: 380px;
     background-color: rgb(36, 61, 133);
-    border: 1px solid rgb(36, 61, 133);
+    border: 0.5px solid white;
     border-radius: 10px;
     visibility: hidden;
     opacity: 0;
     transform: translateY(-10px);
     transition: 0.5s;
+    z-index: 1;
     /*Kommentar test*/
 }
 
