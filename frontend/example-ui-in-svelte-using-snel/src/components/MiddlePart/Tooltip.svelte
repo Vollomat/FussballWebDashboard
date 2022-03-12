@@ -15,7 +15,10 @@
                     </div>
                 </div>
                 <div class="body">
-                    <p>Texttext</p>
+                    <p>
+                        Texttext <br />
+                        textetxt <br />
+                    </p>
                 </div>
             </div>    
         </div>
@@ -34,7 +37,7 @@
     justify-content: center;
     align-items: center;
     font-family: 'Lato', sans-serif;
-    height: 100vh;
+    height: 30vh; /* Platz um das Bild herum */
 }
 
 .container {
@@ -43,30 +46,31 @@
 
 .profile {
     position: relative;
-    width: 60px;
+    width: 50px;
     margin: 0 1em;
-    height: 60px;
+    height: 50px;
     border-radius: 50%;
     background: url(https://wallpaperaccess.com/full/314821.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    cursor: pointer;
-    box-shadow: 0 0 0 4px #fff, 0 0 0 5px #246df5;
+    cursor: initial;
+    box-shadow: 0 0 0 1px #fff;
     transition: 0.2s;
 }
 
 .profile:hover {
-    box-shadow: 0 0 0 4px #fff, 0 0 0 6px #d10fd8;
+    box-shadow: 0 0 0 1px #fff, 0 0 0 5px rgb(36, 61, 133);
 }
 
 .content {
     position: absolute;
-    bottom: 75px;
-    padding: 70px;
+    bottom: -230px;
+    left: -150px;
+    padding: 20px;
     min-width: 400px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    background-color: rgb(36, 61, 133);
+    border: 1px solid rgb(36, 61, 133);
     border-radius: 10px;
     visibility: hidden;
     opacity: 0;
@@ -92,16 +96,17 @@
 }
 
 .content .header .infos .name {
-    font-size: 1.25em;
-    color: #333;
+    font-size: 1.3em;
+    color: whitesmoke;
     letter-spacing: 1px;
     font-size: 600;
 }
 
 .content .header .infos .title {
     font-size: 0.9em;
-    color: #969696;
+    color: whitesmoke;
     font-weight: 500;
+    text-align: left;
 }
 
 .content .body {
@@ -110,13 +115,14 @@
 
 .content .body p{
     font-size: 0.95em;
-    color: #272727;
+    color: whitesmoke;
+    text-align: left;
 }
 
 .profile:hover .content {
     visibility: visible;
     opacity: 1;
-    transform: translateX(-15%) translateY(0px);
+    /*transform: translateX(-15%) translateY(0px);*/
 }
 
 </style>
