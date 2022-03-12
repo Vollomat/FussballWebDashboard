@@ -102,6 +102,7 @@ function changeStatus(){
     opacity: 0;
     transform: translateY(-10px);
     transition: 0.5s;
+    /*Kommentar test*/
 }
 
 .content .header {
