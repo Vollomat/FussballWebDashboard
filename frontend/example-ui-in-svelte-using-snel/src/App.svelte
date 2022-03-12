@@ -5,7 +5,14 @@
   import Header from "@/components/Headers/Header.svelte";
   import Vereine from "@/components/MiddlePart/Vereine.svelte";
   import Torschuetzen from "@/components/MiddlePart/Torschuetzen.svelte";
+  
   import { statusDerSeite } from './components/stores.js';
+
+
+  import Spielplan from "@/components/MiddlePart/Spielplan.svelte";
+  import Tooltip from "@/components/MiddlePart/Tooltip.svelte";
+
+  
 
   let name = "";
   let status;
@@ -20,11 +27,15 @@
   <body>
   <Header />
 
+
   {#if status = 1}
+    <Tooltip />
     <Tabelle />
   {:else if status = 2}
+    <Spielplan />
     <Vereine />
     <Torschuetzen />
+
   {/if}
   
   <Footer />

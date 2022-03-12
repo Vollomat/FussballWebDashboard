@@ -24,6 +24,7 @@ function changeStatus(){
     <div allign="center">
         <table border="1">
             <tr>
+            <td style="background-color:#243D85"><h2>Platz</h2></td>
             <td ><h2>Verein</h2></td>
             <td style="background-color:#243D85">&nbsp Punkte &nbsp</td>
             <td >&nbsp Sp &nbsp</td>
@@ -33,9 +34,12 @@ function changeStatus(){
             <td >&nbsp T &nbsp</td>
             <td style="background-color:#243D85">&nbsp GT &nbsp</td>
             </tr>
-            {#each ergebnisTabelle as tabellenplatz}
+            {#each ergebnisTabelle as tabellenplatz, i}
             <tr>
+
+            <td style="background-color:#243D85">&nbsp {i+1}. &nbsp</td>
             <td class="linkeSeite" on:click|once={changeStatus} ><img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {tabellenplatz.TeamName} </td>
+
             <td style="background-color:#243D85">&nbsp {tabellenplatz.Points} &nbsp</td>
             <td >&nbsp {tabellenplatz.Matches} &nbsp</td> 
             <td style="background-color:#243D85">&nbsp {tabellenplatz.Won}&nbsp</td>
