@@ -28,7 +28,7 @@ async function getTorschuetze() {
             <td><h1>Name</h1></td>
             <td><h2>Tore</h2></td>
             </tr>
-            {#each ergebnisTorschuetze as torschuetzenplatz, i}
+            {#each ergebnisTorschuetze.slice(0, 10) as torschuetzenplatz, i}
             <tr>
             <td>{i+1}.</td>
             <td>{torschuetzenplatz.GoalGetterName}</td>

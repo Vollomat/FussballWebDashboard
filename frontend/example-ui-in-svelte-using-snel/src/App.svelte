@@ -29,8 +29,11 @@
 
 
   {#if status = 1}
+  <Torschuetzen />
     <Tooltip />
     <Tabelle />
+    <Spielplan />
+    <Vereine />
   {:else if status = 2}
     <Spielplan />
     <Vereine />
