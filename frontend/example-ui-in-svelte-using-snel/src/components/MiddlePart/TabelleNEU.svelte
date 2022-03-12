@@ -126,7 +126,7 @@ table{
 
 .content {
     position: absolute;
-    bottom: -310px;
+    bottom: -320px;
     left: -20px;
     padding: 20px;
     min-width: 380px;
