@@ -18,14 +18,34 @@ function changeStatus(){
 }
 </script>
 
+<center> 
 {#await promise};
 {:then}
-{#each ergebnisTabelle as tabellenplatz, i}
 
-<div class="body1">
-    <div class="container">
-        <div class="profile">
-            <img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">
+
+
+    <div allign="center">
+        <table border="1">
+            <tr>
+            <td style="background-color:#243D85"><h2>Platz</h2></td>
+            <td ><h2>Verein</h2></td>
+            <td style="background-color:#243D85">&nbsp Punkte &nbsp</td>
+            <td >&nbsp Sp &nbsp</td>
+            <td style="background-color:#243D85">&nbsp S &nbsp</td>
+            <td >&nbsp U &nbsp</td>
+            <td style="background-color:#243D85">&nbsp N &nbsp</td>
+            <td >&nbsp T &nbsp</td>
+            <td style="background-color:#243D85">&nbsp GT &nbsp</td>
+            </tr>
+            {#each ergebnisTabelle as tabellenplatz, i}
+            
+            <tr>
+            <td style="background-color:#243D85">&nbsp {i+1}. &nbsp</td>
+
+            <div class="body1">
+            <div class="profile">
+            <td class="linkeSeite" on:click|once={changeStatus} ><img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {tabellenplatz.TeamName} </td>
+            
             <div class="content">
                 <div class="header">
                     <img src = {tabellenplatz.TeamIconUrl} alt="Unknown" width="50">
@@ -45,15 +65,39 @@ function changeStatus(){
                         Gegnertore: {tabellenplatz.OpponentGoals} <br />
                     </p>
                 </div>
-            </div>    
-        </div>
+            </div>  
+            </div>
+            </div>
+
+            <td style="background-color:#243D85">&nbsp {tabellenplatz.Points} &nbsp</td>
+            <td >&nbsp {tabellenplatz.Matches} &nbsp</td> 
+            <td style="background-color:#243D85">&nbsp {tabellenplatz.Won}&nbsp</td>
+            <td >&nbsp {tabellenplatz.Draw} &nbsp</td>
+            <td style="background-color:#243D85">&nbsp {tabellenplatz.Lost} &nbsp</td>
+            <td >&nbsp {tabellenplatz.Goals} &nbsp</td>
+            <td style="background-color:#243D85">&nbsp {tabellenplatz.OpponentGoals} &nbsp</td>
+            </tr>
+            {/each}
+        </table>
     </div>
-</div>    
 
-{/each}
 {/await}
-
+</center>
 <style>
+td{
+  text-align: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  height: 50px;
+}
+.linkeSeite{
+    text-align: left;
+}
+table{
+    width: 60%;
+}
+
+/*Tooltip Style*/
 * {
     margin: 0;
     padding: 0;
@@ -61,15 +105,9 @@ function changeStatus(){
 }    
 
 .body1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Lato', sans-serif;
-    height: 50vh; /* Platz um das Bild herum */
-}
-
-.container {
-    display: flex;
+    height: 10vh; /* Platz um das Bild herum */
+    width: 30vh;
 }
 
 .profile {

@@ -11,6 +11,7 @@
 
   import Spielplan from "@/components/MiddlePart/Spielplan.svelte";
   import Tooltip from "@/components/MiddlePart/Tooltip.svelte";
+  import TabelleNEU from "@/components/MiddlePart/TabelleNEU.svelte";
 
   
 
@@ -29,9 +30,10 @@
 
 
   {#if status = 1}
-  <Torschuetzen />
-    <Tooltip />
+    <TabelleNEU />
     <Tabelle />
+    <Tooltip />
+    <Torschuetzen />
     <Spielplan />
     <Vereine />
   {:else if status = 2}
