@@ -10,28 +10,32 @@
   import Spielplan from "@/components/MiddlePart/Spielplan.svelte";
   import TabelleNEU from "@/components/MiddlePart/TabelleNEU.svelte";
 
-  let name = "";
-  let status;
-
   statusDerSeite.subscribe((value) => {
-    status = value;
   });
+
 </script>
 
 <main transition:fade>
   <body>
     <Header />
 
-    {#if (status = 1)}
+    {#if ($statusDerSeite == "startseite")}
       <TabelleNEU />
-      <Torschuetzen />
-      <Spielplan />
-      <Vereine />
-    {:else if (status = 2)}
-      <Spielplan />
-      <Vereine />
+    {/if}
+    
+    
+    {#if ($statusDerSeite == "statistiken")}
       <Torschuetzen />
     {/if}
+
+    {#if ($statusDerSeite == "spielplan")}
+      <Spielplan />
+    {/if}
+
+    {#if ($statusDerSeite == "clubs")}
+      <Vereine />
+    {/if}
+
 
     <Footer />
   </body>

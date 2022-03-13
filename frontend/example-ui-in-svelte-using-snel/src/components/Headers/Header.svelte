@@ -1,9 +1,33 @@
 <script>
-    import Torschuetzen from "@/components/MiddlePart/Torschuetzen.svelte";
+    import { statusDerSeite } from "./../stores.js";
+
+    function changeStatusSpielplan() {
+        $statusDerSeite = "spielplan";
+    }
+
+    function changeStatusClubs() {
+        $statusDerSeite = "clubs";
+    }
+    function changeStatusSpieler() {
+        $statusDerSeite = "spieler";
+    }
+    function changeStatusStatistiken() {
+        $statusDerSeite = "statistiken";
+    }
+    function changeStatusVideos() {
+        $statusDerSeite = "videos";
+    }
+
+    function changeStatusStartseite() {
+        $statusDerSeite = "startseite";
+    }
+
+
 </script>
 
 <header>
-    <a href="index.html">
+    <!-- svelte-ignore a11y-missing-attribute -->
+    <a on:click={changeStatusStartseite}>
         <img
             class="logo"
             src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/ball.png?v=1646394397941"
@@ -12,19 +36,21 @@
     >
     <nav>
         <ul class="nav_links">
-            <li>
-                <a href="../src/components/MiddlePart/Spielplan.svelte"
-                    >Spielplan</a
-                >
-            </li>
-            <li><a href="subpages/events.html">Clubs</a></li>
-            <li><a href="subpages/preise.html">Spieler</a></li>
-            <li><a href="../MiddlePart/Torschuetzen.svelte">Statistiken</a></li>
-            <li><a href="subpages/preise.html">Videos</a></li>
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <li><a on:click={changeStatusSpielplan}>Spielplan</a></li>
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <li><a on:click={changeStatusClubs}>Clubs</a></li>
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <li><a on:click={changeStatusSpieler}>Spieler</a></li>
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <li><a on:click={changeStatusStatistiken}>Statistiken</a></li>
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <li><a on:click={changeStatusVideos}>Videos</a></li>
         </ul>
     </nav>
     <!-- end navigation -->
-    <a class="ticket" href="subpages/programm.html">
+    <!-- svelte-ignore a11y-missing-attribute -->
+    <a class="ticket" on:click={changeStatusStartseite}>
         <button class="btn btn2">Startseite</button>
     </a>
 </header>

@@ -12,10 +12,7 @@
         console.log(ergebnisTabelle[0]);
     }
 
-    function changeStatus() {
-        alert("Hallo");
-        statusDerSeite.set(2);
-    }
+
 </script>
 
 <center>
@@ -44,7 +41,6 @@
                             <div class="profile">
                                 <td
                                     class="linkeSeite"
-                                    on:click|once={changeStatus}
                                     style="border-color: transparent;"
                                     ><img
                                         src={tabellenplatz.TeamIconUrl}

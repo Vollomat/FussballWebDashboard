@@ -13,8 +13,7 @@
     }
 
     function changeStatus() {
-        alert("Hallo");
-        statusDerSeite.set(2);
+        $statusDerSeite = "test2"
     }
 </script>
 

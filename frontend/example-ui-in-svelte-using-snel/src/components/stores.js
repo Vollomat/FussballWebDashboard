@@ -1,3 +1,3 @@
 import { writable } from 'svelte/store';
 
-export const statusDerSeite = writable(1);
+export const statusDerSeite = writable("startseite");
