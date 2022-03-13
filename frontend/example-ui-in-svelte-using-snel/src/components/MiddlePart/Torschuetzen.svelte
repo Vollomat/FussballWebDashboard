@@ -25,6 +25,7 @@
 {:then}
     <div allign="center">
         <h1>Top 10 Bundesliga Torschützen</h1>
+        <br />
         <table border="1">
             <tr>
                 <th class="c1">Platz</th>
@@ -66,6 +67,11 @@
 {/await}
 
 <style>
+    h1 {
+        color: whitesmoke;
+        font-family: "Lato", sans-serif;
+    }
+
     td {
         text-align: center;
     }

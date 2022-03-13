@@ -1,3 +1,4 @@
+
 <script>
     import { statusDerSeite } from "./../stores.js";
 
@@ -69,36 +70,36 @@
                     <div class="facebook">
                         <div class="tooltip">
                             <a
-                                href="https://www.facebook.com/BundesligaOfficial/"
-                                ><img
+                                href="https://www.facebook.com/BundesligaOfficial/">
+                                <img
                                     src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/facebook%20(1).png?v=1646402392741"
                                     width="40"
-                                    alt="alternativer_text"
-                                /></a
-                            ><span class="tooltiptext">Facebook</span>
+                                    alt="alternativer_text"/>
+                                </a>
+                            <span class="tooltiptext">Facebook</span>
                         </div>
                     </div>
                     <div class="twitter">
                         <div class="tooltip">
-                            <a href="https://twitter.com/Bundesliga_DE"
-                                ><img
+                            <a href="https://twitter.com/Bundesliga_DE">
+                                <img
                                     src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/twitter%20(3).png?v=1646428261470"
                                     width="40"
-                                    alt="alternativer_text"
-                                /></a
-                            ><span class="tooltiptext">Twitter</span>
+                                    alt="alternativer_text"/>
+                                </a>
+                            <span class="tooltiptext">Twitter</span>
                         </div>
                     </div>
                     <div class="instagram">
                         <div class="tooltip">
                             <a
-                                href="https://www.instagram.com/bundesliga/?hl=de"
-                                ><img
+                                href="https://www.instagram.com/bundesliga/?hl=de">
+                                <img
                                     src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/instagram%20(1).png?v=1646402383404"
                                     width="40"
-                                    alt="alternativer_text"
-                                /></a
-                            ><span class="tooltiptext">Instagram</span>
+                                    alt="alternativer_text"/>
+                                </a>
+                            <span class="tooltiptext">Instagram</span>
                         </div>
                     </div>
                 </div>
