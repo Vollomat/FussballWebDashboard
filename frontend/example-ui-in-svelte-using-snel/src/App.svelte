@@ -1,66 +1,57 @@
 <script context="module">
   import { fade } from "svelte/transition";
-  import Tabelle from "@/components/MiddlePart/Tabelle.svelte";
   import Footer from "@/components/Footers/Footer.svelte";
   import Header from "@/components/Headers/Header.svelte";
   import Vereine from "@/components/MiddlePart/Vereine.svelte";
   import Torschuetzen from "@/components/MiddlePart/Torschuetzen.svelte";
-  
-  import { statusDerSeite } from './components/stores.js';
 
+  import { statusDerSeite } from "./components/stores.js";
 
   import Spielplan from "@/components/MiddlePart/Spielplan.svelte";
-  import Tooltip from "@/components/MiddlePart/Tooltip.svelte";
   import TabelleNEU from "@/components/MiddlePart/TabelleNEU.svelte";
-
-  
 
   let name = "";
   let status;
-  
-  statusDerSeite.subscribe(value => {
-		status = value;
-	});
 
+  statusDerSeite.subscribe((value) => {
+    status = value;
+  });
 </script>
 
 <main transition:fade>
   <body>
-  <Header />
+    <Header />
 
+    {#if (status = 1)}
+      <TabelleNEU />
+      <Torschuetzen />
+      <Spielplan />
+      <Vereine />
+    {:else if (status = 2)}
+      <Spielplan />
+      <Vereine />
+      <Torschuetzen />
+    {/if}
 
-  {#if status = 1}
-    <TabelleNEU />
-    <Torschuetzen />
-    <Spielplan />
-    <Vereine />
-  {:else if status = 2}
-    <Spielplan />
-    <Vereine />
-    <Torschuetzen />
-
-  {/if}
-  
-  <Footer />
-
-</body>
+    <Footer />
+  </body>
 </main>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
-/*FARBEN: rot: rgb(88, 21, 32); grau: rgb(37, 36, 36), hellgrau: rgb(46, 45, 45)*/
-  body{
+  /*FARBEN: rot: rgb(88, 21, 32); grau: rgb(37, 36, 36), hellgrau: rgb(46, 45, 45)*/
+  body {
     background-color: rgb(3, 21, 32);
   }
 
   main {
     background-color: rgb(3, 21, 32);
     text-align: center;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
   }
 
   @media (min-width: 640px) {
