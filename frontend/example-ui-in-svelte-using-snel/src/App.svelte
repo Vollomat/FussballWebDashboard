@@ -9,6 +9,7 @@
 
   import Spielplan from "@/components/MiddlePart/Spielplan.svelte";
   import TabelleNEU from "@/components/MiddlePart/TabelleNEU.svelte";
+  import Kontakt from "@/components/MiddlePart/Kontakt.svelte";
 
   statusDerSeite.subscribe((value) => {
   });
@@ -23,7 +24,7 @@
       <TabelleNEU />
     {/if}
     
-    
+
     {#if ($statusDerSeite == "statistiken")}
       <Torschuetzen />
     {/if}
@@ -36,6 +37,38 @@
       <Vereine />
     {/if}
 
+
+    {#if ($statusDerSeite == "faq")}
+    TODO
+    {/if}
+
+    {#if ($statusDerSeite == "kontakt")}
+      <Kontakt />
+    {/if}
+
+    {#if ($statusDerSeite == "newsletter")}
+    TODO
+    {/if}
+
+    {#if ($statusDerSeite == "karriere")}
+    TODO
+    {/if}
+
+    {#if ($statusDerSeite == "impressum")}
+    TODO
+    {/if}
+
+    {#if ($statusDerSeite == "datenschutz")}
+    TODO
+    {/if}
+
+    {#if ($statusDerSeite == "agb")}
+    TODO
+    {/if}
+
+    {#if ($statusDerSeite == "hausordnung")}
+    TODO
+    {/if}
 
     <Footer />
   </body>

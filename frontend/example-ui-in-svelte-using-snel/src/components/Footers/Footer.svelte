@@ -1,22 +1,66 @@
+<script>
+    import { statusDerSeite } from "./../stores.js";
+
+    function changeStatusFAQ() {
+        $statusDerSeite = "faq";
+    }
+
+    function changeStatusKontakt() {
+        $statusDerSeite = "kontakt";
+    }
+
+    function changeStatusNewsletter() {
+        $statusDerSeite = "newsletter";
+    }
+
+    function changeStatusKarriere() {
+        $statusDerSeite = "karriere";
+    }
+
+    function changeStatusImpressum() {
+        $statusDerSeite = "impressum";
+    }
+
+    function changeStatusDatenschutz() {
+        $statusDerSeite = "datenschutz";
+    }
+
+    function changeStatusAGB() {
+        $statusDerSeite = "agb";
+    }
+
+    function changeStatusHausordnung() {
+        $statusDerSeite = "hausordnung";
+    }
+</script>
+
 <footer class="footer">
     <div class="container">
         <div class="row">
             <div class="footer-col">
                 <ul>
                     <li><h4>Kontakt</h4></li>
-                    <li><a href="footarea/faq.html">FAQ</a></li>
-                    <li><a href="subpages/contact.html">Kontakt</a></li>
-                    <li><a href="footarea/newsletter.html">Newsletter</a></li>
-                    <li><a href="footarea/karriere.html">Karriere</a></li>
+                    <!-- svelte-ignore a11y-missing-attribute -->
+                    <li><a on:click={changeStatusFAQ}>FAQ</a></li>
+                    <!-- svelte-ignore a11y-missing-attribute -->
+                    <li><a on:click={changeStatusKontakt}>Kontakt</a></li>
+                    <!-- svelte-ignore a11y-missing-attribute -->
+                    <li><a on:click={changeStatusNewsletter}>Newsletter</a></li>
+                    <!-- svelte-ignore a11y-missing-attribute -->
+                    <li><a on:click={changeStatusKarriere}>Karriere</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <ul>
                     <li><h4>Rechtliches</h4></li>
-                    <li><a href="footarea/impressum.html">Impressum</a></li>
-                    <li><a href="footarea/datenschutz.html">Datenschutz</a></li>
-                    <li><a href="footarea/agb.html">AGB</a></li>
-                    <li><a href="footarea/hausordnung.html">Hausordnung</a></li>
+                    <!-- svelte-ignore a11y-missing-attribute -->
+                    <li><a on:click={changeStatusImpressum}>Impressum</a></li>
+                    <!-- svelte-ignore a11y-missing-attribute -->
+                    <li><a on:click={changeStatusDatenschutz}>Datenschutz</a></li>
+                    <!-- svelte-ignore a11y-missing-attribute -->
+                    <li><a on:click={changeStatusAGB}>AGB</a></li>
+                    <!-- svelte-ignore a11y-missing-attribute -->
+                    <li><a on:click={changeStatusHausordnung}>Hausordnung</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -24,7 +68,8 @@
                 <div class="social-links">
                     <div class="facebook">
                         <div class="tooltip">
-                            <a href="https://www.facebook.com/BundesligaOfficial/"
+                            <a
+                                href="https://www.facebook.com/BundesligaOfficial/"
                                 ><img
                                     src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/facebook%20(1).png?v=1646402392741"
                                     width="40"
@@ -46,7 +91,8 @@
                     </div>
                     <div class="instagram">
                         <div class="tooltip">
-                            <a href="https://www.instagram.com/bundesliga/?hl=de"
+                            <a
+                                href="https://www.instagram.com/bundesliga/?hl=de"
                                 ><img
                                     src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/instagram%20(1).png?v=1646402383404"
                                     width="40"
