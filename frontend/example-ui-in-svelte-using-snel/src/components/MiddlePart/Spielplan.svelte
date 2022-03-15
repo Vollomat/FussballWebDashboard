@@ -29,9 +29,9 @@
             <tr>
             <td>&nbsp {spielplan.Group.GroupOrderID} &nbsp</td>
             <td style="background-color:#243D85">&nbsp {spielplan.MatchDateTime} &nbsp</td> 
-            <td>&nbsp {spielplan.LocationCity} &nbsp</td>
+            <td>&nbsp {spielplan.Location.LocationCity} &nbsp</td>
             <td style="background-color:#243D85">&nbsp {spielplan.Team1.TeamName} &nbsp</td>
-            <td>&nbsp {spielplan.TeamName} &nbsp</td>
+            <td>&nbsp {spielplan.Team2.TeamName} &nbsp</td>
             </tr>
             {/each}
         </table>
