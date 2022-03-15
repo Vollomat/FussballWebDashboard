@@ -1,19 +1,22 @@
 <script>
     import { Request } from 'https://deno.land/x/request@1.3.2/mod.ts'
-    import { statusDerSeite } from './stores.js'
 
     let VereineDerSaison = '';
     let promise;
     let promiseSpiele;
     let mannschaft_a;
     let mannschaft_b;
-    let spiele;
+    let spiele = '';
+    let hasmatchresult = false;
+    let meinSuperTollesArray;
     promise = getTabelle();
+    let x = 10
 
 async function getTabelle() {
     let uri = 'https://www.openligadb.de/api/getavailableteams/bl1/2021'
     const result = await Request.get(uri)
      VereineDerSaison = result;
+     console.log(VereineDerSaison)
 }
 
 function getMatches(){
@@ -35,14 +38,28 @@ async function showMatches(){
         let uri = 'https://www.openligadb.de/api/getmatchdata/' + document.getElementsByName(mannschaft_a).item(0).id + '/' + document.getElementsByName(mannschaft_b).item(0).id;
         const result = await Request.get(uri)
         spiele = result;
-        alert("bin in der if-anweisung")
-        console.log(spiele[0])
+        console.log(spiele)
     } 
+}
+
+function ausgabe(){
+    console.log(promiseSpiele)
+}
+
+function checkcount(spiel){
+    console.log("bin in checkcount")
+    if(spiel.MatchResults.length > 0){
+        return true
+    }
+    return false
 }
 
 </script>
 
 <center> 
+    <button on:click={ausgabe}>
+        ausgabe
+    </button>
 {#await promise}
 {:then}
     <div allign="center">
@@ -59,7 +76,7 @@ async function showMatches(){
         <datalist id="Mannschaft B">
         {#each VereineDerSaison as Verein}
              <option value= {Verein.ShortName} name= {Verein.ShortName} id= {Verein.TeamId} >
-         {/each}
+        {/each}
         </datalist>
         <button id="showMatches" on:click|once={getMatches} type="ShowMatches">Spiele anzeigen</button>
     </div>
@@ -78,15 +95,22 @@ async function showMatches(){
             <td style="background-color:#243D85">&nbsp Tore &nbsp</td>
             </tr>
             {#each spiele as spiel}
-            <tr>
-            <td style="background-color:#243D85">&nbsp {spiel.MatchDateTime} &nbsp</td>
-            <td >&nbsp {spiel.Location.Location.LocationCity} &nbsp</td> 
-            <td style="background-color:#243D85">&nbsp {spiel.Group.GroupOrderId} &nbsp</td>
-            <td class="linkeSeite" ><img src = {spiel.Team1.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {spiel.Teams1.TeamName} </td>
-            <td style="background-color:#243D85">&nbsp {spiel.Matchresults.Matchresult[0].PointsTeam1} &nbsp</td>
-            <td class="linkeSeite" ><img src = {spiel.Team2.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {spiel.Teams1.TeamName} </td>
-            <td style="background-color:#243D85">&nbsp {spiel.Matchresults.Matchresult[0].PointsTeam2} &nbsp</td>
-            </tr>
+                {hasmatchresult = checkcount(spiel)}
+                <tr>
+                <td style="background-color:#243D85">&nbsp {spiel.MatchDateTime} &nbsp</td>
+                <td >&nbsp {spiel.Location} &nbsp</td> 
+                <td style="background-color:#243D85">&nbsp {spiel.Group.GroupName} &nbsp</td>
+                <td class="linkeSeite" ><img src = {spiel.Team1.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {spiel.Team1.TeamName} </td>
+                {#if hasmatchresult}
+                    <td style="background-color:#243D85">&nbsp {spiel.MatchResults[0].PointsTeam1} &nbsp</td>
+                    <td class="linkeSeite" ><img src = {spiel.Team2.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {spiel.Team2.TeamName} </td>     
+                    <td style="background-color:#243D85">&nbsp {spiel.MatchResults[0].PointsTeam2} &nbsp</td>
+                {:else }
+                    <td style="background-color:#243D85">&nbsp ---- &nbsp</td>
+                    <td class="linkeSeite" ><img src = {spiel.Team2.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {spiel.Team2.TeamName} </td>          
+                    <td style="background-color:#243D85">&nbsp ---- &nbsp</td>
+                {/if}
+                </tr>
             {/each}
         </table>
     </div>
