@@ -9,7 +9,10 @@ Im letzten Semester konnte somit unser Projekt (Kinoreservierungssystem) leider 
 
 ## Verwendung von Deno Open Source 
 https://deno.land/x/sort@v1.1.1
-Sortieralgorithmus wurde angewendet zum Sortieren der Torschützenhilfe anhand der Anzahl der Tore
+Sortieralgorithmus wurde angewendet zum Sortieren der Torschützenhilfe anhand der Anzahl der Tore.
 
 ## Domain DNS Einstellungen
 Die Website wird über eine eigene Domain betrieben und wurde mithilfe von A-Records verbunden.
+
+## Globale Variablen
+Mithilfe von globalen Variablen konnten wir in App.svelte dynamisch Komponenten hinzufügen/entfernen und somit unsere Website dynamischer gestalten.
