@@ -31,10 +31,10 @@ async function getSpielplan() {
             </tr>
             {#each spiele as spielplan}
             <tr>
-            <td>&nbsp {spielplan.GroupOrderID} &nbsp</td>
+            <td>&nbsp {spielplan.Group.GroupOrderID} &nbsp</td>
             <td style="background-color:#243D85">&nbsp {spielplan.MatchDateTime} &nbsp</td> 
             <td>&nbsp {spielplan.LocationCity} &nbsp</td>
-            <td style="background-color:#243D85">&nbsp {spielplan.TeamName} &nbsp</td>
+            <td style="background-color:#243D85">&nbsp {spielplan.Team1.TeamName} &nbsp</td>
             <td>&nbsp {spielplan.TeamName} &nbsp</td>
             </tr>
             {/each}
