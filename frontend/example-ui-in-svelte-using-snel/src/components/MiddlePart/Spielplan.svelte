@@ -14,62 +14,30 @@
 </script>
 
 <center>
-<<<<<<< HEAD
 {#await promise};
 {:then}
     <div allign="center">
         <table border="1">
             <tr>
             <td><h2>&nbsp Spieltag &nbsp</h2></td>
-            <td style="background-color:#243D85">&nbsp Datum &nbsp</td>
-            <td>&nbsp Ort &nbsp</td>
-            <td style="background-color:#243D85">&nbsp Mannschaft 1 &nbsp</td>
-            <td>&nbsp Mannschaft 2 &nbsp</td>
+            <td style="background-color:#243D85"><h2>&nbsp Datum &nbsp</h2></td>
+            <td><h2>&nbsp Ort &nbsp</h2></td>
+            <td style="background-color:#243D85"><h2>&nbsp Mannschaft 1 &nbsp</h2></td>
+            <td><h2>&nbsp Mannschaft 2 &nbsp</h2></td>
             </tr>
             {#each spiele as spielplan}
             <tr>
-            <td>&nbsp {spielplan.Group.GroupOrderID} &nbsp</td>
-            <td style="background-color:#243D85">&nbsp {spielplan.MatchDateTime} &nbsp</td> 
-            <td>&nbsp {spielplan.LocationCity} &nbsp</td>
-            <td style="background-color:#243D85">&nbsp {spielplan.Team1.TeamName} &nbsp</td>
-            <td>&nbsp {spielplan.TeamName} &nbsp</td>
+            <td><h2>&nbsp {spielplan.Group.GroupOrderID} &nbsp</h2></td>
+            <td style="background-color:#243D85"><h2>&nbsp {spielplan.MatchDateTime} &nbsp</h2></td> 
+            <td><h2>&nbsp {spielplan.Location.LocationCity} &nbsp</h2></td>
+            <td style="background-color:#243D85"><h2>&nbsp {spielplan.Team1.TeamName} &nbsp</h2></td>
+            <td><h2>&nbsp {spielplan.Team2.TeamName} &nbsp</h2></td>
             </tr>
             {/each}
         </table>
     
     </div>
 {/await}
-=======
-    {#await promise};
-    {:then}
-        <div allign="center">
-            <table border="1">
-                <tr>
-                    <td><h2>&nbsp Spieltag &nbsp</h2></td>
-                    <td style="background-color:#243D85">&nbsp Datum &nbsp</td>
-                    <td>&nbsp Ort &nbsp</td>
-                    <td style="background-color:#243D85"
-                        >&nbsp Mannschaft 1 &nbsp</td
-                    >
-                    <td>&nbsp Mannschaft 2 &nbsp</td>
-                </tr>
-                {#each spiele as spielplan}
-                    <tr>
-                        <td>&nbsp {spielplan.GroupOrderID} &nbsp</td>
-                        <td style="background-color:#243D85"
-                            >&nbsp {spielplan.MatchDateTime} &nbsp</td
-                        >
-                        <td>&nbsp {spielplan.LocationCity} &nbsp</td>
-                        <td style="background-color:#243D85"
-                            >&nbsp {spielplan.TeamName} &nbsp</td
-                        >
-                        <td>&nbsp {spielplan.TeamName} &nbsp</td>
-                    </tr>
-                {/each}
-            </table>
-        </div>
-    {/await}
->>>>>>> 1d5d6d07ce416e4bd521a05fedc3f03eda522a6d
 </center>
 
 <style>
