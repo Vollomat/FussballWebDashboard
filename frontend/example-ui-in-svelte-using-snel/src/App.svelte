@@ -4,6 +4,7 @@
   import Header from "@/components/Headers/Header.svelte";
   import Vereine from "@/components/MiddlePart/Vereine.svelte";
   import Torschuetzen from "@/components/MiddlePart/Torschuetzen.svelte";
+  import SpieleDerVereine from "@/components/MiddlePart/SpieleDerVereine.svelte";
 
   import { statusDerSeite } from "./components/stores.js";
 
@@ -24,6 +25,9 @@
       <TabelleNEU />
     {/if}
     
+    {#if ($statusDerSeite == "spieleDerVereine")}
+      <SpieleDerVereine />
+    {/if}
 
     {#if ($statusDerSeite == "statistiken")}
       <Torschuetzen />

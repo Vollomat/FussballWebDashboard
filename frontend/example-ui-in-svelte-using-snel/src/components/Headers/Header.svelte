@@ -14,6 +14,10 @@
     function changeStatusStatistiken() {
         $statusDerSeite = "statistiken";
     }
+
+    function ChangeSatusSpieleDerVereine(){
+        $statusDerSeite = "spieleDerVereine"
+    }
     function changeStatusVideos() {
         $statusDerSeite = "videos";
     }
@@ -40,6 +44,8 @@
             <li><a on:click={changeStatusSpielplan}>Spielplan</a></li>
             <!-- svelte-ignore a11y-missing-attribute -->
             <li><a on:click={changeStatusClubs}>Clubs</a></li>
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <li><a on:click={ChangeSatusSpieleDerVereine}>Spiele</a></li>
             <!-- svelte-ignore a11y-missing-attribute -->
             <li><a on:click={changeStatusSpieler}>Spieler</a></li>
             <!-- svelte-ignore a11y-missing-attribute -->
