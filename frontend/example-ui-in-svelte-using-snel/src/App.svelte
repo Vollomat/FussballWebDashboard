@@ -1,7 +1,7 @@
 <script context="module">
   import { fade } from "svelte/transition";
-  import Footer from "@/components/Footers/Footer.svelte";
-  import Header from "@/components/Headers/Header.svelte";
+  import Footer from "@/components/Footer/Footer.svelte";
+  import Header from "@/components/Header/Header.svelte";
   import Vereine from "@/components/MiddlePart/Vereine.svelte";
   import Torschuetzen from "@/components/MiddlePart/Torschuetzen.svelte";
   import SpieleDerVereine from "@/components/MiddlePart/SpieleDerVereine.svelte";
@@ -9,7 +9,7 @@
   import { statusDerSeite } from "./components/stores.js";
 
   import Spielplan from "@/components/MiddlePart/Spielplan.svelte";
-  import TabelleNEU from "@/components/MiddlePart/TabelleNEU.svelte";
+  import Tabelle from "@/components/MiddlePart/Tabelle.svelte";
   import Kontakt from "@/components/MiddlePart/Kontakt.svelte";
 
   statusDerSeite.subscribe((value) => {
@@ -22,7 +22,7 @@
     <Header />
 
     {#if ($statusDerSeite == "startseite")}
-      <TabelleNEU />
+      <Tabelle />
     {/if}
     
     {#if ($statusDerSeite == "spieleDerVereine")}
