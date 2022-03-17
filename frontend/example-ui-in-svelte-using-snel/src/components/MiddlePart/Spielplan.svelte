@@ -21,17 +21,17 @@
             <tr>
             <td><h2>&nbsp Spieltag &nbsp</h2></td>
             <td style="background-color:#243D85"><h2>&nbsp Datum &nbsp</h2></td>
-            <td><h2>&nbsp Ort &nbsp</h2></td>
-            <td style="background-color:#243D85"><h2>&nbsp Mannschaft 1 &nbsp</h2></td>
-            <td><h2>&nbsp Mannschaft 2 &nbsp</h2></td>
+            <td><h2>&nbsp Team 1 &nbsp</h2></td>
+            <td style="background-color:#243D85"><h2>&nbsp Team 2 &nbsp</h2></td>
+            <td><h2>&nbsp Ergebnis &nbsp</h2></td>
             </tr>
             {#each spiele as spielplan}
             <tr>
-            <td><h2>&nbsp {spielplan.Group.GroupOrderID} &nbsp</h2></td>
-            <td style="background-color:#243D85"><h2>&nbsp {spielplan.MatchDateTime} &nbsp</h2></td> 
-            <td><h2>&nbsp {spielplan.Location.LocationCity} &nbsp</h2></td>
-            <td style="background-color:#243D85"><h2>&nbsp {spielplan.Team1.TeamName} &nbsp</h2></td>
-            <td><h2>&nbsp {spielplan.Team2.TeamName} &nbsp</h2></td>
+            <td>&nbsp {spielplan.Group.GroupOrderID} &nbsp</td>
+            <td style="background-color:#243D85">&nbsp {spielplan.MatchDateTime} &nbsp</td> 
+            <td>&nbsp {spielplan.Team1.TeamName} &nbsp</td>
+            <td style="background-color:#243D85">&nbsp {spielplan.Team2.TeamName} &nbsp</td>
+            <td>&nbsp {spielplan.MatchResults.PointsTeam1} : {spielplan.MatchResults.PointsTeam2} &nbsp</td>
             </tr>
             {/each}
         </table>
@@ -45,6 +45,6 @@
         text-align: center;
         color: white;
         font-family: "Lato", sans-serif;
-        height: 50px;
     }
+    
 </style>
