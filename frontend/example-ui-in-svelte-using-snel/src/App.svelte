@@ -1,7 +1,7 @@
 <script context="module">
   import { fade } from "svelte/transition";
-  import Footer from "@/components/Footer/Footer.svelte";
-  import Header from "@/components/Header/Header.svelte";
+  import Footer from "@/components/Footers/Footer.svelte";
+  import Header from "@/components/Headers/Header.svelte";
   import Vereine from "@/components/MiddlePart/Vereine.svelte";
   import Torschuetzen from "@/components/MiddlePart/Torschuetzen.svelte";
   import SpieleDerVereine from "@/components/MiddlePart/SpieleDerVereine.svelte";

@@ -1,5 +1,5 @@
 <script>
-    import { statusDerSeite } from "./../stores.js";
+    import { statusDerSeite } from "../stores.js";
 
     function changeStatusSpielplan() {
         $statusDerSeite = "spielplan";
