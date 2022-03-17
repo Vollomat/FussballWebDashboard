@@ -18,9 +18,6 @@
     function ChangeSatusSpieleDerVereine(){
         $statusDerSeite = "spieleDerVereine"
     }
-    function changeStatusVideos() {
-        $statusDerSeite = "videos";
-    }
 
     function changeStatusStartseite() {
         $statusDerSeite = "startseite";
@@ -50,8 +47,6 @@
             <li><a on:click={changeStatusSpieler}>Spieler</a></li>
             <!-- svelte-ignore a11y-missing-attribute -->
             <li><a on:click={changeStatusStatistiken}>Statistiken</a></li>
-            <!-- svelte-ignore a11y-missing-attribute -->
-            <li><a on:click={changeStatusVideos}>Videos</a></li>
         </ul>
     </nav>
     <!-- end navigation -->
