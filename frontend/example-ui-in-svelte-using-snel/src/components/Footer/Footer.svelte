@@ -73,7 +73,7 @@
                                 href="https://www.facebook.com/BundesligaOfficial/">
                                 <img
                                     src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/facebook%20(1).png?v=1646402392741"
-                                    width="40"
+                                    width="30"
                                     alt="alternativer_text"/>
                                 </a>
                             <span class="tooltiptext">Facebook</span>
@@ -84,7 +84,7 @@
                             <a href="https://twitter.com/Bundesliga_DE">
                                 <img
                                     src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/twitter%20(3).png?v=1646428261470"
-                                    width="40"
+                                    width="30"
                                     alt="alternativer_text"/>
                                 </a>
                             <span class="tooltiptext">Twitter</span>
@@ -96,7 +96,7 @@
                                 href="https://www.instagram.com/bundesliga/?hl=de">
                                 <img
                                     src="https://cdn.glitch.global/9b12190e-3bb9-40f3-8183-4852b3d97d98/instagram%20(1).png?v=1646402383404"
-                                    width="40"
+                                    width="30"
                                     alt="alternativer_text"/>
                                 </a>
                             <span class="tooltiptext">Instagram</span>
@@ -115,10 +115,10 @@
 <style>
     .container {
         max-width: 100%;
-        /*text-align: left;*/
         perspective: 1000px;
         margin-bottom: 5%;
         margin: 0 auto;
+        margin-left: 220px;
     }
 
     .row {
@@ -186,8 +186,8 @@
 
     .footer-col .social-links a {
         display: inline-block;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         background-color: #ffffff;
         margin: 0 10px 10px 0;
         text-align: center;
