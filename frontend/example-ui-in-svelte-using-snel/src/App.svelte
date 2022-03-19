@@ -9,7 +9,7 @@
   import { statusDerSeite } from "./components/stores.js";
 
   import Spielplan from "@/components/MiddlePart/Spielplan.svelte";
-  import TabelleNEU from "@/components/MiddlePart/TabelleNEU.svelte";
+  import Tabelle from "@/components/MiddlePart/Tabelle.svelte";
   import Kontakt from "@/components/MiddlePart/Kontakt.svelte";
 
   statusDerSeite.subscribe((value) => {
@@ -22,7 +22,7 @@
     <Header />
 
     {#if ($statusDerSeite == "startseite")}
-      <TabelleNEU />
+      <Tabelle />
     {/if}
     
     {#if ($statusDerSeite == "spieleDerVereine")}
