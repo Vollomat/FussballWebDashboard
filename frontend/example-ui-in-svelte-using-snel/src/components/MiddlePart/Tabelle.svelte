@@ -34,19 +34,16 @@
                 {#each ergebnisTabelle as tabellenplatz, i}
                     <tr>
                         <td style="background-color:#243D85"
-                            >&nbsp {i + 1}. &nbsp</td
-                        >
+                            >&nbsp {i + 1}. &nbsp</td>
 
                         <div class="body1">
                             <div class="profile">
                                 <td
                                     class="linkeSeite"
-                                    style="border-color: transparent;"
-                                    ><img
+                                    style="border-color: transparent;"><img
                                         src={tabellenplatz.TeamIconUrl}
                                         alt="Unknown"
-                                        width="50"
-                                    />&nbsp &nbsp {tabellenplatz.TeamName}
+                                        width="50"/>&nbsp &nbsp {tabellenplatz.TeamName}
                                 </td>
 
                                 <div class="content">
@@ -54,8 +51,7 @@
                                         <img
                                             src={tabellenplatz.TeamIconUrl}
                                             alt="Unknown"
-                                            width="50"
-                                        />
+                                            width="50"/>
                                         <div class="infos">
                                             <h3 class="name">
                                                 {tabellenplatz.TeamName}
@@ -86,20 +82,16 @@
                         </div>
 
                         <td style="background-color:#243D85"
-                            >&nbsp {tabellenplatz.Points} &nbsp</td
-                        >
+                            >&nbsp {tabellenplatz.Points} &nbsp</td>
                         <td>&nbsp {tabellenplatz.Matches} &nbsp</td>
                         <td style="background-color:#243D85"
-                            >&nbsp {tabellenplatz.Won}&nbsp</td
-                        >
+                            >&nbsp {tabellenplatz.Won}&nbsp</td>
                         <td>&nbsp {tabellenplatz.Draw} &nbsp</td>
                         <td style="background-color:#243D85"
-                            >&nbsp {tabellenplatz.Lost} &nbsp</td
-                        >
+                            >&nbsp {tabellenplatz.Lost} &nbsp</td>
                         <td>&nbsp {tabellenplatz.Goals} &nbsp</td>
                         <td style="background-color:#243D85"
-                            >&nbsp {tabellenplatz.OpponentGoals} &nbsp</td
-                        >
+                            >&nbsp {tabellenplatz.OpponentGoals} &nbsp</td>
                     </tr>
                 {/each}
             </table>
@@ -134,6 +126,7 @@
         width: 30vh;
     }
 
+    /*Boxen um den Tooltip*/
     .profile {
         position: absolute;
         margin: 0 0;
