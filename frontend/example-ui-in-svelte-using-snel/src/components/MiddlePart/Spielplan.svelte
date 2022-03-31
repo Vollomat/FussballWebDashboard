@@ -19,14 +19,16 @@
     
 
     function getSpieleDesSpieltags(){
-    
+        
         AuswahloptionenSpieltage = document.getElementById("SP").value;
+        AuswahloptionenSpieltage = parseInt(AuswahloptionenSpieltage);
         alert(AuswahloptionenSpieltage);
-
+        console.log(SpieleDerSaison.GroupOrderID)
         for(let i = 0; i < SpieleDerSaison.length; i++) {
-            if (AuswahloptionenSpieltage = SpieleDerSaison.GroupOrderID){
-                AusgewaehlterSpieltag.push(SpieleDerSaison);
-                console.log(SpieleDerSaison.GroupOrderID)
+            if (AuswahloptionenSpieltage === SpieleDerSaison[i].GroupOrderID){
+                AusgewaehlterSpieltag.push(SpieleDerSaison[i]);
+                console.log("bin in methode")
+                console.log(SpieleDerSaison[i].GroupOrderID)
             }
             
         }
@@ -81,13 +83,13 @@
             <td><h2>&nbsp Ergebnis &nbsp</h2></td>
             </tr>
             {#each SpieleDerSaison as spielplan}
-                {hasmatchresult = checkcount(spielplan)}
+                
                 <tr>
                 <td>&nbsp {spielplan.Group.GroupOrderID} &nbsp</td>
                 <td style="background-color:#243D85">&nbsp {spielplan.MatchDateTime} &nbsp</td> 
                 <td>&nbsp {spielplan.Team1.TeamName} &nbsp</td>
                 <td style="background-color:#243D85">&nbsp {spielplan.Team2.TeamName} &nbsp</td>
-                {#if hasmatchresult}
+                {#if checkcount(spielplan)}
                     <td>&nbsp {spielplan.MatchResults[0].PointsTeam1} : {spielplan.MatchResults[0].PointsTeam2} &nbsp</td>
                 {:else }
                 <td>&nbsp --- : --- &nbsp</td>
