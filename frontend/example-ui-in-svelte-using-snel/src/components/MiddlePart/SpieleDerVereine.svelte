@@ -7,10 +7,8 @@
     let mannschaft_a;
     let mannschaft_b;
     let spiele = '';
-    let hasmatchresult = false;
-    let meinSuperTollesArray;
+    let splitDate;
     promise = getTabelle();
-    let x = 10
 
 async function getTabelle() {
     let uri = 'https://www.openligadb.de/api/getavailableteams/bl1/2021'
@@ -23,6 +21,15 @@ function getMatches(){
     promiseSpiele = showMatches();
 }
 
+function ChangeDate(){
+    for (let i=0; i < spiele.length; i++) {
+        console.log(spiele[i].MatchDateTime)
+        splitDate = spiele[i].MatchDateTime.split("T", 1);
+        console.log(splitDate)
+        spiele[i].MatchDateTime = splitDate;
+     } 
+}
+
 function changeStatus(){
     statusDerSeite.set(2);
     alert("statusDerSeite wurde geaendert");
@@ -30,10 +37,7 @@ function changeStatus(){
 
 async function showMatches(){
     mannschaft_a = document.getElementById("MA").value;
-    alert(mannschaft_a);
     mannschaft_b = document.getElementById("MB").value;
-    alert(mannschaft_b);
-    alert("bin in der methode")
     if(mannschaft_a !== "" && mannschaft_b !== "") {
         let uri = 'https://www.openligadb.de/api/getmatchdata/' + document.getElementsByName(mannschaft_a).item(0).id + '/' + document.getElementsByName(mannschaft_b).item(0).id;
         const result = await Request.get(uri)
@@ -42,24 +46,16 @@ async function showMatches(){
     } 
 }
 
-function ausgabe(){
-    console.log(promiseSpiele)
-}
 
 function checkcount(spiel){
-    console.log("bin in checkcount")
     if(spiel.MatchResults.length > 0){
         return true
     }
     return false
 }
-
 </script>
 
 <center> 
-    <button on:click={ausgabe}>
-        ausgabe
-    </button>
 {#await promise}
 {:then}
     <div allign="center">
@@ -78,16 +74,18 @@ function checkcount(spiel){
              <option value= {Verein.ShortName} name= {Verein.ShortName} id= {Verein.TeamId} >
         {/each}
         </datalist>
-        <button id="showMatches" on:click|once={getMatches} type="ShowMatches">Spiele anzeigen</button>
+        <br />
+        <button id="showMatches" on:click={getMatches} type="ShowMatches">Spiele anzeigen</button>
     </div>
 {/await}
 {#await promiseSpiele}
 {:then}
-    <div allign="center">
+{ChangeDate()}
+        <div allign="center">
         <table border="1">
             <tr>
             <td style="background-color:#243D85">&nbsp Datum &nbsp </td>
-            <td ><h2>Ort</h2></td> 
+            <td ><h2>Liga</h2></td> 
             <td style="background-color:#243D85">&nbsp Spieltag &nbsp </td>
             <td ><h2>Team 1</h2></td> 
             <td style="background-color:#243D85">&nbsp Tore &nbsp</td>
@@ -95,13 +93,12 @@ function checkcount(spiel){
             <td style="background-color:#243D85">&nbsp Tore &nbsp</td>
             </tr>
             {#each spiele as spiel}
-                {hasmatchresult = checkcount(spiel)}
                 <tr>
                 <td style="background-color:#243D85">&nbsp {spiel.MatchDateTime} &nbsp</td>
-                <td >&nbsp {spiel.Location} &nbsp</td> 
+                <td >&nbsp {spiel.LeagueName} &nbsp</td> 
                 <td style="background-color:#243D85">&nbsp {spiel.Group.GroupName} &nbsp</td>
                 <td class="linkeSeite" ><img src = {spiel.Team1.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {spiel.Team1.TeamName} </td>
-                {#if hasmatchresult}
+                {#if checkcount(spiel)}
                     <td style="background-color:#243D85">&nbsp {spiel.MatchResults[0].PointsTeam1} &nbsp</td>
                     <td class="linkeSeite" ><img src = {spiel.Team2.TeamIconUrl} alt="Unknown" width="50">&nbsp &nbsp {spiel.Team2.TeamName} </td>     
                     <td style="background-color:#243D85">&nbsp {spiel.MatchResults[0].PointsTeam2} &nbsp</td>
@@ -129,5 +126,11 @@ td{
 }
 table{
     width: 60%;
+}
+h2{
+    color: white;
+}
+label{
+    color: white;
 }
 </style>
