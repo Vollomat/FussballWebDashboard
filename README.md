@@ -11,3 +11,9 @@ Telegram Chatbot: https://deno.land/x/telegram_chatbot
 ## Open API (Community Projekt) ##
 https://github.com/OpenLigaDB/OpenLigaDB-Samples
 
+
+Dana Schrift weiß
+Nandini
+Elisa Newsletter
+Patrick
+
