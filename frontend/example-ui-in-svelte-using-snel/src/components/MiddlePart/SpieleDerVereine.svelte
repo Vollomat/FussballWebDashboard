@@ -21,18 +21,13 @@ function getMatches(){
     promiseSpiele = showMatches();
 }
 
-function ChangeDate(){
+function changeDate(){
     for (let i=0; i < spiele.length; i++) {
-        console.log(spiele[i].MatchDateTime)
-        splitDate = spiele[i].MatchDateTime.split("T", 1);
+        console.log(spieleDerSaison[i].MatchDateTime)
+        splitDate = spieleDerSaison[i].MatchDateTime.split("T", 1);
         console.log(splitDate)
-        spiele[i].MatchDateTime = splitDate;
+        spieleDerSaison[i].MatchDateTime = splitDate;
      } 
-}
-
-function changeStatus(){
-    statusDerSeite.set(2);
-    alert("statusDerSeite wurde geaendert");
 }
 
 async function showMatches(){
@@ -46,8 +41,8 @@ async function showMatches(){
     } 
 }
 
-
 function checkcount(spiel){
+    
     if(spiel.MatchResults.length > 0){
         return true
     }
@@ -60,9 +55,9 @@ function checkcount(spiel){
 {:then}
     <div allign="center">
         <h2><label for="myBrowser"> Welche Spiele wollen sie sehen?</label></h2>
-        <label for="myBrowser">Gib eine Mannschaft ein:</label>
+        <label for="myBrowser">Wähle eine Mannschaft aus:</label>
         <input list="Mannschaft A" id="MA" name="MannschaftA" />  
-        <label for="myBrowser">Gib eine Mannschaft ein:</label>
+        <label for="myBrowser">Wähle eine Mannschaft aus:</label>
         <input list="Mannschaft B" id="MB" name="MannschaftB" />
         <datalist id="Mannschaft A">
         {#each VereineDerSaison as Verein}
@@ -80,7 +75,6 @@ function checkcount(spiel){
 {/await}
 {#await promiseSpiele}
 {:then}
-{ChangeDate()}
         <div allign="center">
         <table border="1">
             <tr>
@@ -133,4 +127,5 @@ h2{
 label{
     color: white;
 }
+
 </style>
