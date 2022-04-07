@@ -10,7 +10,10 @@
 
   import Spielplan from "@/components/MiddlePart/Spielplan.svelte";
   import Tabelle from "@/components/MiddlePart/Tabelle.svelte";
-  import Kontakt from "@/components/MiddlePart/Kontakt.svelte";
+  import Kontakt from "@/components/Subpages/Kontakt.svelte";
+  import Newsletter from "@/components/Subpages/Newsletter.svelte";
+  import Impressum from "@/components/Subpages/Impressum.svelte";
+  import Datenschutz from "@/components/Subpages/Datenschutz.svelte"; 
 
   //kommentar
 
@@ -44,36 +47,21 @@
     {/if}
 
 
-    {#if ($statusDerSeite == "faq")}
-    TODO
-    {/if}
-
     {#if ($statusDerSeite == "kontakt")}
       <Kontakt />
     {/if}
 
     {#if ($statusDerSeite == "newsletter")}
-    TODO
+      <Newsletter />
     {/if}
 
-    {#if ($statusDerSeite == "karriere")}
-    TODO
-    {/if}
 
     {#if ($statusDerSeite == "impressum")}
-    TODO
+      <Impressum />
     {/if}
 
     {#if ($statusDerSeite == "datenschutz")}
-    TODO
-    {/if}
-
-    {#if ($statusDerSeite == "agb")}
-    TODO
-    {/if}
-
-    {#if ($statusDerSeite == "hausordnung")}
-    TODO
+      <Datenschutz />
     {/if}
 
     <Footer />
