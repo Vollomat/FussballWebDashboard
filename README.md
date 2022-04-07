@@ -12,8 +12,8 @@ Telegram Chatbot: https://deno.land/x/telegram_chatbot
 https://github.com/OpenLigaDB/OpenLigaDB-Samples
 
 
-Dana Schrift weiß
-Nandini
+Dana Schrift weiß, Impressum
+Nandini Datenschutz
 Elisa Newsletter
-Patrick
+Patrick Kontakt, Schrift weiß
 
