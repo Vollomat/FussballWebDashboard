@@ -7,7 +7,11 @@
         Warum du unseren Newsletter abonnieren solltest:
     </h2>
 
+<<<<<<< HEAD:frontend/src/components/Subpages/Newsletter.svelte
     <p><br /></p>
+=======
+    <p></p>
+>>>>>>> 7987c563142c548acc8e5d7a27b6156990c4b38c:frontend/example-ui-in-svelte-using-snel/src/components/Subpages/Newsletter.svelte
 
     <li>Du erfährst rechtzeitig von neuen Spielen und deren Verlauf</li>
     <li>Du erhältst exklusive Insights</li>
