@@ -119,7 +119,7 @@ details[open] summary {
     -moz-appearance: none;
     appearance: none;
     background-color: #fff;
-    border-color: #581520;
+    border-color: blue;
     border-width: 5px;
     border-radius: 0;
     padding-top: .5rem;

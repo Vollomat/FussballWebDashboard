@@ -1,11 +1,12 @@
 <script>
 
 </script>
-<div class="wrapper">
+<center>
+<div class="wrapper" align="center">
 <h2>
 Datenschutz
 </h2>
-<div class="agb">
+<div class="agb" align="center">
 <h3>
 Allgemeine Hinweise
 </h3>
@@ -57,10 +58,14 @@ Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Komm
 </span> </p>
 </div>
 </div>
+</center>
 
 <style>
 div{
 color: white;
 font-family:"Lato", sans-serif;
+width: 70%;
+justify-content: center;
+align-items: center;
 }
 </style>
