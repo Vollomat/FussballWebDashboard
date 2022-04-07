@@ -12,6 +12,8 @@
   import Tabelle from "@/components/MiddlePart/Tabelle.svelte";
   import Kontakt from "@/components/MiddlePart/Kontakt.svelte";
 
+  //kommentar
+
   statusDerSeite.subscribe((value) => {
   });
 
