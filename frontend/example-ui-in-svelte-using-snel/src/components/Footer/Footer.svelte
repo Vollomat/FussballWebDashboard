@@ -2,9 +2,6 @@
 <script>
     import { statusDerSeite } from "./../stores.js";
 
-    function changeStatusFAQ() {
-        $statusDerSeite = "faq";
-    }
 
     function changeStatusKontakt() {
         $statusDerSeite = "kontakt";
@@ -12,10 +9,6 @@
 
     function changeStatusNewsletter() {
         $statusDerSeite = "newsletter";
-    }
-
-    function changeStatusKarriere() {
-        $statusDerSeite = "karriere";
     }
 
     function changeStatusImpressum() {
@@ -26,13 +19,9 @@
         $statusDerSeite = "datenschutz";
     }
 
-    function changeStatusAGB() {
-        $statusDerSeite = "agb";
-    }
 
-    function changeStatusHausordnung() {
-        $statusDerSeite = "hausordnung";
-    }
+
+    
 </script>
 
 <footer class="footer">
@@ -42,13 +31,9 @@
                 <ul>
                     <li><h4>Kontakt</h4></li>
                     <!-- svelte-ignore a11y-missing-attribute -->
-                    <li><a on:click={changeStatusFAQ}>FAQ</a></li>
-                    <!-- svelte-ignore a11y-missing-attribute -->
                     <li><a on:click={changeStatusKontakt}>Kontakt</a></li>
                     <!-- svelte-ignore a11y-missing-attribute -->
                     <li><a on:click={changeStatusNewsletter}>Newsletter</a></li>
-                    <!-- svelte-ignore a11y-missing-attribute -->
-                    <li><a on:click={changeStatusKarriere}>Karriere</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -58,10 +43,6 @@
                     <li><a on:click={changeStatusImpressum}>Impressum</a></li>
                     <!-- svelte-ignore a11y-missing-attribute -->
                     <li><a on:click={changeStatusDatenschutz}>Datenschutz</a></li>
-                    <!-- svelte-ignore a11y-missing-attribute -->
-                    <li><a on:click={changeStatusAGB}>AGB</a></li>
-                    <!-- svelte-ignore a11y-missing-attribute -->
-                    <li><a on:click={changeStatusHausordnung}>Hausordnung</a></li>
                 </ul>
             </div>
             <div class="footer-col">
