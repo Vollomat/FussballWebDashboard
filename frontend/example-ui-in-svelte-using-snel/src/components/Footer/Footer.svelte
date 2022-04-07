@@ -132,6 +132,7 @@
         font-weight: 500;
         position: relative;
         text-align: left;
+        font-family: "Lato", sans-serif;
     }
 
     /*Striche*/
@@ -158,6 +159,7 @@
         font-weight: 300;
         display: block;
         transition: all 0.3s ease;
+        font-family: "Lato", sans-serif;
     }
 
     .footer-col ul li a:hover {
