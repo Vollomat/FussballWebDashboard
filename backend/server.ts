@@ -12,7 +12,7 @@ app.get("/getData", async function (req, res) {
 
     const result: any = await Request.get('https://www.openligadb.de/api/getmatchdata/bl1')
    
-    const TOKEN = "5018908901:AAGWhHIaIN9PcsEz0l0QsW8lsXvDtjbv6Oc";
+    const TOKEN = "";
     if (!TOKEN) throw new Error("Bot token is not provided");
     const bot = new TelegramBot(TOKEN);
     
