@@ -1,29 +1,37 @@
 import { opine } from "https://deno.land/x/opine@2.1.1/mod.ts";
 import { Request } from 'https://deno.land/x/request@1.3.2/mod.ts'
 
+
+import { TelegramBot, UpdateType } from "https://deno.land/x/telegram_bot_api/mod.ts"
+import "https://deno.land/x/dot_env@0.2.0/load.ts"
+
 const app = opine();
 
-const pathToIndexHTMLFile = `${Deno.cwd()}/frontend/index.html`
 
+app.get("/getData", async function (req, res) {
 
-app.get("/", async function (req, res) {
-    const result: any = await Request.get('https://www.openligadb.de/api/getavailableteams/bl1/2021')
+    const result: any = await Request.get('https://www.openligadb.de/api/getmatchdata/bl1')
+   
+    const TOKEN = "5018908901:AAGWhHIaIN9PcsEz0l0QsW8lsXvDtjbv6Oc";
+    if (!TOKEN) throw new Error("Bot token is not provided");
+    const bot = new TelegramBot(TOKEN);
+    
+    bot.on(UpdateType.Message, async (message: any) => {
 
-    let ergebnis = "<h1>Fußball Bundesliga 2022</h1>";
+        const text = message.message.text || "I can't hear you";
+    
+        await bot.sendMessage({ chat_id: message.message.chat.id, text: `echo ${text}` })
+    
+    });
+    
+    bot.run({
+        polling: true,
+    });
 
-    for (let i = 0; i < result.length; i++) {
-        ergebnis = ergebnis + "<img src= " + result[i].TeamIconUrl + " height=100 width=100>";
-        if(i != 0) {
-            if(i%6 == 0) {
-                ergebnis = ergebnis + "<br>";
-            }
-        }
-    }
-    res.send(`${ergebnis}`);
-    console.log(`${ergebnis}`);
 });
 
-const port = 3000
+const port = 3005
+
 
 app.listen(
     port,
