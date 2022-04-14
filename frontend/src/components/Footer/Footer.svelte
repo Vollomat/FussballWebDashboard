@@ -99,7 +99,7 @@
         perspective: 1000px;
         margin-bottom: 5%;
         margin: 0 auto;
-        margin-left: 220px;
+        /*margin-left: 220px;*/
     }
 
     .row {
@@ -119,9 +119,9 @@
     }
 
     .footer-col {
-        width: 22%;
-        padding: 0 15px;
-        margin-left: 40px;
+        width: 20%;
+        padding: 0 30px;
+        margin-left: 120px;
     }
 
     .footer-col h4 {
