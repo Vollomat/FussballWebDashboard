@@ -92,6 +92,7 @@
 
     .nav_links li a:hover {
         color: rgb(36, 61, 133);
+        cursor: pointer;
     }
 
     button {
